@@ -1,0 +1,24 @@
+<button class="btn btn-primary btn-decide" (click)='onDecisionClick()'>What should I do?</button>
+
+<div class="cockpit-body">
+  <div class="cockpit-header">
+    <p class="float-left your-options">Your options</p>
+    <p class="float-right remove-all" (click)="onRemoveAllClick()">Remove all</p>
+  </div>
+  <div class="cockpit-text">
+    <p class="option-text">Please add options to get started!</p>
+  </div>
+  <div class="cockpit-list">
+    <app-decision-list></app-decision-list>
+  </div>
+  <div class="cockpit-input">
+    <div class="row">
+      <div class="col-md-9">
+        <input type="text" placeholder="Add option here." #input>
+      </div>
+      <div class="col-md-3">
+        <button class="btn btn-primary btn-input" (click)="onAddClick()">Add option</button>
+      </div>
+    </div>
+  </div>
+</div>

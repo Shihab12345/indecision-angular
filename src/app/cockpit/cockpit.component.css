@@ -1,0 +1,65 @@
+.btn-decide {
+    margin: 2.0em 0;
+    width:100%;
+    border-radius: 0px;
+    height: 5.0em;
+}
+
+.remove-all:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.cockpit-body {
+    background: black;
+    width: 100%;
+}
+
+.cockpit-header {
+    padding: 5%;;
+    width: 100%;
+    height: 75px;
+    background:gray;
+}
+
+.option-text {
+    text-align: center;
+    margin: 7%;
+    color: white;
+}
+
+input {
+    padding:2%;
+    width:100%;
+}
+
+.cockpit-input {
+    padding:2%;
+}
+
+@media screen and (max-width: 1920px) {
+    .btn-input {
+        border-radius: 0;
+        height: 100%;
+        width: 100%;
+        font-size: 100%;
+    }
+}
+
+@media screen and (max-width: 1240px) {
+    .btn-input {
+        border-radius: 0;
+        height: 100%;
+        width: 100%;
+        font-size: 50%;
+    }  
+}
+
+@media screen and (max-width: 720px) {
+    .btn-input {
+        border-radius: 0;
+        height: 100%;
+        width: 100%;
+        font-size: 100%;
+    } 
+}

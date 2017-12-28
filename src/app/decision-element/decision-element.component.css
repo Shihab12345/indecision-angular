@@ -1,0 +1,13 @@
+.element-container {
+    padding: 7%;
+    font-size: 1.2em;
+    width: 100%;
+    background: orange;
+    color: white;
+    border-top: 1px solid white;
+}
+
+.remove-text:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}

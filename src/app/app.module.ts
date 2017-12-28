@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -19,7 +19,8 @@ import { DecisionService } from './decision.service';
     DecisionElementComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ModalModule.forRoot()
   ],
   providers: [DecisionService],
   bootstrap: [AppComponent]

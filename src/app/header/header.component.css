@@ -1,0 +1,16 @@
+.navbar-custom {
+    background:	#201E2B;
+}
+
+.navbar-brand {
+    font-size: 2.0em;
+    margin: 0;
+}
+
+.nav-text {
+    color: rgb(180, 165, 209);
+}
+
+.nav-content {
+    margin: 0 30%;
+}

@@ -3,6 +3,7 @@ import { EventEmitter } from "@angular/core";
 export class DecisionService {
     private decisions : string[] = [];
     decisionsChanged = new EventEmitter<string[]>();
+    decisionExists = new EventEmitter<void>();
 
     getDecisionList() {
         return this.decisions.slice();
@@ -14,7 +15,7 @@ export class DecisionService {
             this.decisionsChanged.emit(this.decisions);
             console.log(this.decisions);
         }else{
-            console.log('This decision already exists!');
+            this.decisionExists.emit(null);
         }
     }
 
@@ -30,7 +31,11 @@ export class DecisionService {
     }
 
     decideOption() {
-        var randomIndex = Math.floor(Math.random() * this.decisions.length);
-        alert(this.decisions[randomIndex]);
+        if(this.decisions.length > 1){
+            var randomIndex = Math.floor(Math.random() * this.decisions.length);
+            return this.decisions[randomIndex];
+        }else{
+            return 'Please add more than one option first'
+        }
     }
 }

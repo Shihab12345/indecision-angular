@@ -1,4 +1,4 @@
-<button class="btn btn-primary btn-decide" (click)='onDecisionClick()'>What should I do?</button>
+<button class="btn btn-primary btn-decide" (click)='onDecisionClick(decisionTemplate)'>What should I do?</button>
 
 <div class="cockpit-body">
   <div class="cockpit-header">
@@ -22,3 +22,27 @@
     </div>
   </div>
 </div>
+ 
+<ng-template #decisionTemplate>
+  <div class="modal-custom">
+    <div class="modal-header">
+      <h4 class="modal-title">Decision</h4>
+    </div>
+    <div class="modal-body">
+      <p>{{decision}}</p>
+      <button type="button" class="btn btn-primary" aria-label="Close" (click)="decisionModalRef.hide()">Okay</button>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #decisionExistsTemplate>
+  <div class="modal-custom">
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Oh no!</h4>
+      </div>
+      <div class="modal-body">
+         <p>The decision you typed already exists!</p>
+         <button type="button" class="btn btn-primary" aria-label="Close" (click)="decisionExistsModalRef.hide()">Okay</button>
+      </div>
+ </div>
+</ng-template>

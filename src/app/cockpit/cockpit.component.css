@@ -15,6 +15,7 @@
 .cockpit-body {
     background: #474A63;
     width: 100%;
+    margin-bottom: 15px;
 }
 
 .cockpit-header {
@@ -39,7 +40,7 @@ input {
 }
 
 .cockpit-input {
-    padding:4%;
+    padding:5%;
 }
 
 .modal-custom {

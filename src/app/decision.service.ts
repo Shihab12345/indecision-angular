@@ -1,9 +1,10 @@
 import { EventEmitter } from "@angular/core";
+import { Subject } from 'rxjs/Subject';
 
 export class DecisionService {
     private decisions : string[] = [];
-    decisionsChanged = new EventEmitter<string[]>();
-    decisionExists = new EventEmitter<void>();
+    decisionsChanged = new Subject<string[]>();
+    decisionExists = new Subject<void>();
 
     getDecisionList() {
         return this.decisions.slice();
@@ -12,21 +13,21 @@ export class DecisionService {
     addDecision(decision : string){
         if(!this.decisions.includes(decision)){
             this.decisions.push(decision);
-            this.decisionsChanged.emit(this.decisions);
+            this.decisionsChanged.next(this.decisions);
             console.log(this.decisions);
         }else{
-            this.decisionExists.emit(null);
+            this.decisionExists.next(null);
         }
     }
 
     removeDecision(decisionIndex : number){
         this.decisions.splice(decisionIndex, 1);
-        this.decisionsChanged.emit(this.decisions);
+        this.decisionsChanged.next(this.decisions);
     }
 
     removeAllDecisions(){
         this.decisions = [];
-        this.decisionsChanged.emit(this.decisions);
+        this.decisionsChanged.next(this.decisions);
         console.log(this.decisions);
     }
 
